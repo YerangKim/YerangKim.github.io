@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        body {
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .sidebar {
+            background: #3C3C3C;
+            width: 280px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .main-content {
+            margin-right: 280px;
+            min-height: 100vh;
+        }
+        
+        .nav-link {
+            display: block;
+            padding: 12px 20px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.2s;
+            border-bottom: 1px solid #4E4E4E;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #4E4E4E;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #555;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80') center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 60px 80px;
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2c2c2c;
+        }
+        
+        .work-card {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .work-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                margin-right: 0;
+            }
+            
+            .content-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 우측 사이드바 -->
+    <aside class="sidebar">
+        <!-- 프로필 섹션 -->
+        <div class="p-8 text-center">
+            <img src="https://via.placeholder.com/150/3C3C3C/FFFFFF?text=Profile" 
+                 alt="프로필 사진" 
+                 class="profile-img mb-4">
+            <h1 class="text-2xl font-bold text-white mb-2">Your Name</h1>
+            <p class="text-gray-300 text-sm mb-1">[your.name]</p>
+            <p class="text-gray-300 text-sm">당신의 이름</p>
+        </div>
+        
+        <!-- 네비게이션 -->
+        <nav class="mt-4">
+            <a href="#about" class="nav-link active">About me</a>
+            <a href="#works" class="nav-link">Works</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#" class="nav-link">CV: Feb. 2026</a>
+        </nav>
+    </aside>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="main-content">
+        <!-- 배너 섹션 -->
+        <div class="banner">
+            <div>
+                <h2 class="text-4xl font-bold mb-4">Welcome</h2>
+                <p class="text-xl">포트폴리오에 오신 것을 환영합니다</p>
+            </div>
+        </div>
+
+        <!-- About me 섹션 -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">About me</h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                    저는 사용자 경험을 중시하며, 깔끔하고 효율적인 코드를 작성하는 것을 좋아하는 개발자입니다.
+                </p>
+                <p>
+                    최신 기술 트렌드를 학습하고 적용하여 더 나은 솔루션을 제공하기 위해 노력하고 있습니다. 
+                    사용자 중심의 디자인과 성능 최적화에 관심이 많으며, 다양한 프로젝트를 통해 경험을 쌓아가고 있습니다.
+                </p>
+                <p>
+                    Before starting my career, I studied Computer Science and gained experience through various projects 
+                    and collaborations. I'm passionate about creating meaningful digital experiences.
+                </p>
+            </div>
+
+            <!-- 기술 스택 -->
+            <div class="mt-12">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">기술 스택</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="font-semibold text-gray-700 mb-2">Frontend:</p>
+                        <p class="text-gray-600">HTML, CSS, JavaScript, React, Tailwind CSS</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-700 mb-2">Backend:</p>
+                        <p class="text-gray-600">Node.js, Python, Database</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 학력/경력 -->
+            <div class="mt-12">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">학력</h3>
+                <table class="w-full border-collapse">
+                    <tr class="border-b border-gray-200">
+                        <td class="py-3 font-semibold text-gray-700 w-32">2020</td>
+                        <td class="py-3 text-gray-600">Computer Science, University</td>
+                    </tr>
+                    <tr class="border-b border-gray-200">
+                        <td class="py-3 font-semibold text-gray-700">2016</td>
+                        <td class="py-3 text-gray-600">Bachelor's Degree, University</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Works 섹션 -->
+        <section id="works" class="content-section bg-gray-50">
+            <h2 class="section-title">Works</h2>
+            <p class="text-gray-600 mb-8">제가 작업한 프로젝트들을 소개합니다.</p>
+            
+            <div class="space-y-6">
+                <!-- 작업물 1 -->
+                <div class="work-card">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">웹 애플리케이션 프로젝트</h3>
+                    <p class="text-gray-600 mb-4">
+                        모던한 UI/UX를 적용한 반응형 웹 애플리케이션입니다. 사용자 경험을 최우선으로 고려하여 
+                        직관적인 인터페이스와 빠른 성능을 구현했습니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded text-sm">React</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded text-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded text-sm">Node.js</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">자세히 보기 →</a>
+                </div>
+
+                <!-- 작업물 2 -->
+                <div class="work-card">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">모바일 애플리케이션</h3>
+                    <p class="text-gray-600 mb-4">
+                        사용자 친화적인 인터페이스를 가진 모바일 애플리케이션입니다. 
+                        크로스 플랫폼 개발을 통해 iOS와 Android 모두에서 원활하게 작동합니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded text-sm">React Native</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded text-sm">TypeScript</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">자세히 보기 →</a>
+                </div>
+
+                <!-- 작업물 3 -->
+                <div class="work-card">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">데이터 시각화 대시보드</h3>
+                    <p class="text-gray-600 mb-4">
+                        복잡한 데이터를 직관적으로 표현하는 대시보드입니다. 
+                        실시간 데이터 처리와 인터랙티브한 차트를 통해 정보를 효과적으로 전달합니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded text-sm">D3.js</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded text-sm">Vue.js</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded text-sm">Python</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">자세히 보기 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact 섹션 -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact</h2>
+            <div class="space-y-4 text-gray-700">
+                <p class="text-lg">
+                    새로운 프로젝트나 협업 기회에 대해 이야기해보고 싶습니다.
+                </p>
+                <div class="mt-6">
+                    <p class="font-semibold mb-2">이메일:</p>
+                    <a href="mailto:your.email@example.com" class="text-blue-600 hover:text-blue-800">
+                        your.email@example.com
+                    </a>
+                </div>
+                <div class="mt-4">
+                    <p class="font-semibold mb-2">GitHub:</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                        github.com/yourusername
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer class="bg-gray-800 text-gray-400 py-8 px-80 text-center text-sm">
+            <p>© 2026 포트폴리오. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        // 네비게이션 활성화
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // 스크롤 시 활성 네비게이션 업데이트
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
