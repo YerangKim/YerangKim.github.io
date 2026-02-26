@@ -8,49 +8,34 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
         
-        * {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        
-        body {
-            background: #f5f5f5;
-            color: #333;
-        }
+        * { font-family: 'Noto Sans KR', sans-serif; }
+        body { background: #f5f5f5; color: #333; }
         
         .sidebar {
             background: #1e3a5f;
             width: 280px;
             position: fixed;
-            top: 0;
-            right: 0;
+            top: 0; right: 0;
             height: 100vh;
             overflow-y: auto;
             z-index: 1000;
         }
         
-        .main-content {
-            margin-right: 280px;
-            min-height: 100vh;
-        }
+        .main-content { margin-right: 280px; min-height: 100vh; }
         
         .nav-link {
             display: block;
             padding: 12px 20px;
             color: rgba(255,255,255,0.9);
             text-decoration: none;
-            text-align: justify;
             transition: background-color 0.2s;
             border-bottom: 1px solid rgba(255,255,255,0.2);
         }
         
-        .nav-link:hover,
-        .nav-link.active {
-            background-color: rgba(255,255,255,0.15);
-        }
+        .nav-link:hover, .nav-link.active { background-color: rgba(255,255,255,0.15); }
         
         .profile-img {
-            width: 105px;
-            height: 105px;
+            width: 105px; height: 105px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid rgba(255,255,255,0.4);
@@ -62,65 +47,37 @@
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
                         url('assets/cathedral-banner.png') center/cover;
             height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
             filter: brightness(1.2) contrast(1.1);
         }
         
-        .content-section {
-            background: white;
-            padding: 60px 80px;
-            margin-bottom: 0;
-        }
+        .content-section { background: white; padding: 60px 80px; }
         
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #2c2c2c;
-        }
+        .section-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 30px; color: #2c2c2c; }
+        .section-body { font-size: 0.875rem; line-height: 1.6; color: #4b5563; }
         
         .work-card {
             background: #f9f9f9;
             border: 1px solid #e0e0e0;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: box-shadow 0.3s;
+            padding: 25px;
+            transition: all 0.3s;
         }
-        
         .work-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
         }
         
         @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            
-            .main-content {
-                margin-right: 0;
-            }
-            
-            .content-section {
-                padding: 40px 20px;
-            }
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .main-content { margin-right: 0; }
+            .content-section { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
-    <!-- 우측 사이드바 -->
     <aside class="sidebar">
-        <!-- 프로필 섹션 -->
         <div class="p-8">
             <div class="text-center mb-6">
-                <img src="assets/profile.png" 
-                     alt="Lena Kim 프로필 사진" 
-                     class="profile-img">
+                <img src="assets/profile.png" alt="Lena Kim 프로필 사진" class="profile-img">
             </div>
             <h1 class="text-xl font-bold text-white mb-3 text-center">Lena Kim</h1>
             <p class="text-gray-300 text-xs mb-1 text-center">[ˈliːnə kɪm]</p>
@@ -129,8 +86,6 @@
             <p class="text-gray-300 text-xs italic mb-2 text-center">Department of Linguistics</p>
             <p class="text-gray-300 text-xs italic text-center">Seoul National University</p>
         </div>
-        
-        <!-- 네비게이션 -->
         <nav class="mt-4">
             <a href="#about" class="nav-link active">My expertise</a>
             <a href="#works" class="nav-link">Works</a>
@@ -139,16 +94,12 @@
         </nav>
     </aside>
 
-    <!-- 메인 콘텐츠 영역 -->
     <main class="main-content">
-        <!-- 배너 섹션 -->
-        <div class="banner">
-        </div>
+        <div class="banner"></div>
 
-        <!-- About me 섹션 -->
         <section id="about" class="content-section">
-            <h2 class="section-title" style="font-size: 1.75rem;">My expertise</h2>
-            <div class="space-y-4 text-gray-700 leading-relaxed" style="font-size: 0.875rem;">
+            <h2 class="section-title">My expertise</h2>
+            <div class="section-body space-y-4">
                 <p>
                     언어학적 통찰과 데이터를 결합하여 최적의 사용자 경험을 설계하는 연구자입니다. 대학내일에서 6년간 공공 마케팅 업무를 담당했으며, 현재는 서울대학교에서 실험언어학을 연구하며 제2언어 습득(SLA)과 인간의 언어 처리에 관심을 갖고 있습니다. PyTorch와 LangChain 등 최신 기술을 활용해 사람과 시스템을 잇는 더 나은 디지털 솔루션을 연구하고 있습니다.
                 </p>
@@ -157,13 +108,12 @@
                 </p>
             </div>
 
-            <!-- 기술 스택 -->
-            <div class="mt-12" style="font-size: 0.875rem;">
-                <h3 class="font-bold mb-4 text-gray-800" style="font-size: 0.875rem;">기술 스택</h3>
+            <div class="mt-12 section-body">
+                <h3 class="font-bold mb-4 text-gray-800">기술 스택</h3>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <p class="font-semibold text-gray-700 mb-2">대학원 과정 중</p>
-                        <ul class="text-gray-600 space-y-2 list-disc list-inside">
+                        <ul class="space-y-1 list-disc list-inside">
                             <li>pytorch LLM Transformer</li>
                             <li>R Frequentist, Bayesian statistics</li>
                             <li>java script online experiment design</li>
@@ -173,106 +123,92 @@
                     </div>
                     <div>
                         <p class="font-semibold text-gray-700 mb-2">재직 중</p>
-                        <ul class="text-gray-600 space-y-2 list-disc list-inside">
+                        <ul class="space-y-1 list-disc list-inside">
                             <li>html search engine webcrawling (python)</li>
                             <li>Sometrend cloud Big data LLM</li>
+                            <li>Search Engine Optimization Analysis</li>
+                            <li>Website maintenance and operation</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
         </section>
 
-        <!-- Works 섹션 -->
         <section id="works" class="content-section bg-gray-50">
-            <p class="text-gray-500 text-xs mb-2">To be edited</p>
             <h2 class="section-title">Works</h2>
-            <p class="text-gray-600 mb-8">제가 작업한 프로젝트들을 소개합니다.</p>
+            <div class="section-body mb-8">
+                <p>다양한 글로벌 기업 및 공공기관과 협업하며 쌓아온 전략적 마케팅 실무 경험과 프로젝트 운영 성과를 소개합니다.</p>
+            </div>
             
-            <div class="space-y-6">
-                <!-- 작업물 1 -->
-                <div class="work-card">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">웹 애플리케이션 프로젝트</h3>
-                    <p class="text-gray-600 mb-4">
-                        모던한 UI/UX를 적용한 반응형 웹 애플리케이션입니다. 사용자 경험을 최우선으로 고려하여 
-                        직관적인 인터페이스와 빠른 성능을 구현했습니다.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded text-sm">React</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded text-sm">Tailwind CSS</span>
-                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded text-sm">Node.js</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 section-body">
+                <div class="work-card rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="w-1.5 h-5 bg-blue-600 mr-3 rounded-full"></span>
+                        <h3 class="font-bold text-gray-800">KOICA</h3>
                     </div>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">자세히 보기 →</a>
+                    <p class="font-semibold text-gray-700 mb-2">WeKO Global Supporters 운영/관리</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        전 세계인을 대상으로 하는 KOICA 홍보 대사 WeKO 프로그램의 글로벌 서포터즈를 총괄 운영하고 관리했습니다.
+                    </p>
                 </div>
-
-                <!-- 작업물 2 -->
-                <div class="work-card">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">모바일 애플리케이션</h3>
-                    <p class="text-gray-600 mb-4">
-                        사용자 친화적인 인터페이스를 가진 모바일 애플리케이션입니다. 
-                        크로스 플랫폼 개발을 통해 iOS와 Android 모두에서 원활하게 작동합니다.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded text-sm">React Native</span>
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded text-sm">TypeScript</span>
+                <div class="work-card rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="w-1.5 h-5 bg-orange-500 mr-3 rounded-full"></span>
+                        <h3 class="font-bold text-gray-800">NAVIEN MAGIC</h3>
                     </div>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">자세히 보기 →</a>
+                    <p class="font-semibold text-gray-700 mb-2">Influencer Marketing 협업/홍보 운영</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        인플루언서 협업을 통한 브랜드 마케팅 캠페인을 기획하고 시장 내 브랜드 인지도를 높이는 홍보 활동을 운영했습니다.
+                    </p>
                 </div>
-
-                <!-- 작업물 3 -->
-                <div class="work-card">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">데이터 시각화 대시보드</h3>
-                    <p class="text-gray-600 mb-4">
-                        복잡한 데이터를 직관적으로 표현하는 대시보드입니다. 
-                        실시간 데이터 처리와 인터랙티브한 차트를 통해 정보를 효과적으로 전달합니다.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded text-sm">D3.js</span>
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded text-sm">Vue.js</span>
-                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded text-sm">Python</span>
+                <div class="work-card rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="w-1.5 h-5 bg-indigo-700 mr-3 rounded-full"></span>
+                        <h3 class="font-bold text-gray-800">SONY PlayStation</h3>
                     </div>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">자세히 보기 →</a>
+                    <p class="font-semibold text-gray-700 mb-2">New IP 홍보 마케팅</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        새로운 게임 IP 출시를 위한 마케팅 전략을 수립하고 온/오프라인 홍보를 통해 유저 기반을 확보했습니다.
+                    </p>
+                </div>
+                <div class="work-card rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="w-1.5 h-5 bg-red-600 mr-3 rounded-full"></span>
+                        <h3 class="font-bold text-gray-800">FUJIFILM</h3>
+                    </div>
+                    <p class="font-semibold text-gray-700 mb-2">Corporation 협업/홍보 운영</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        후지필름의 기업 아이덴티티 강화를 위한 대외 협업 및 홍보 캠페인을 운영하며 파트너십을 구축했습니다.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact 섹션 -->
         <section id="contact" class="content-section">
             <h2 class="section-title">Contact</h2>
-            <div class="space-y-4 text-gray-700">
-                <p class="text-lg">
-                    새로운 프로젝트나 협업 기회에 대해 이야기해보고 싶습니다.
-                </p>
+            <div class="section-body space-y-4">
+                <p>새로운 프로젝트나 협업 기회에 대해 이야기해보고 싶습니다.</p>
                 <div class="mt-6">
-                    <p class="font-semibold mb-2">이메일:</p>
-                    <a href="mailto:your.email@example.com" class="text-blue-600 hover:text-blue-800">
-                        your.email@example.com
-                    </a>
+                    <p class="font-semibold mb-1">이메일:</p>
+                    <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a>
                 </div>
-                <div class="mt-4">
-                    <p class="font-semibold mb-2">GitHub:</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800">
-                        github.com/yourusername
-                    </a>
+                <div>
+                    <p class="font-semibold mb-1">GitHub:</p>
+                    <a href="#" class="text-blue-600 hover:underline">github.com/yourusername</a>
                 </div>
             </div>
         </section>
 
-        <!-- 푸터 -->
-        <footer class="bg-gray-800 text-gray-400 py-8 px-80 text-center text-sm">
-            <p>© 2026 포트폴리오. All rights reserved.</p>
+        <footer class="bg-gray-800 text-gray-400 py-8 text-center text-xs">
+            <p>© 2026 Lena Kim. All rights reserved.</p>
         </footer>
     </main>
 
     <script>
-        // 네비게이션 활성화
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 if (this.getAttribute('href').startsWith('#')) {
                     e.preventDefault();
-                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                    
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
                     if (targetElement) {
@@ -281,26 +217,18 @@
                 }
             });
         });
-
-        // 스크롤 시 활성 네비게이션 업데이트
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-            
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= sectionTop - 200) {
+                if (window.pageYOffset >= section.offsetTop - 200) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('href') === `#${current}`) { link.classList.add('active'); }
             });
         });
     </script>
