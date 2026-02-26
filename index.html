@@ -11,21 +11,21 @@
         * { font-family: 'Noto Sans KR', sans-serif; }
         body { background: #f5f5f5; color: #333; }
         
-        /* [수정] 사이드바 위치를 left: 0으로 변경 */
+        /* 사이드바 좌측 배치 */
         .sidebar {
             background: #1e3a5f;
             width: 280px;
             position: fixed;
             top: 0; 
-            left: 0; /* 우측(right)에서 좌측(left)으로 변경 */
+            left: 0; 
             height: 100vh;
             overflow-y: auto;
             z-index: 1000;
         }
         
-        /* [수정] 메인 콘텐츠 여백을 margin-left로 변경 */
+        /* 메인 콘텐츠 여백 설정 */
         .main-content { 
-            margin-left: 280px; /* margin-right에서 margin-left로 변경 */
+            margin-left: 280px; 
             min-height: 100vh; 
         }
         
@@ -94,8 +94,7 @@
             <a href="#about" class="nav-link active">My expertise</a>
             <a href="#works" class="nav-link">Works</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="#" class="nav-link">CV: Feb. 2026</a>
-        </nav>
+            </nav>
     </aside>
 
     <main class="main-content">
